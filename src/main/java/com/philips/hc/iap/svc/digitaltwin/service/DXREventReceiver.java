@@ -37,14 +37,11 @@ public class DXREventReceiver {
 
         evParser.parseEvent("{\n" +
                 "  \"dtwin_id\": \"dtmi:com:philips:pd:dxr:portable_detector;2\",\n" +
-                "  \"eventDateTime\": \"2022-06-07T14:30:37.944Z\",\n" +
-                "  \"wifilinkQuality\": 2,\n" +
-                "  \"wifirawLinkQuality\": 100,\n" +
-                "  \"wifidataRate\": 162,\n" +
-                "  \"wifinoisePower\": -81,\n" +
-                "  \"wifisignalPower\": -66,\n" +
-                "  \"instanceType\": \"Detector\",\n" +
-                "  \"dtwin_instance_id\": \"Detector-SN1604W3\"\n" +
+                "  \"eventDateTime\": \"2021-09-21T11:39:04.462Z\",\n" +
+                "  \"calibrationTemp\": 25.0,\n" +
+                "  \"detectorTemp\": 31.1,\n" +
+                "  \"instanceType\": \"Wifi\",\n" +
+                "  \"dtwin_instance_id\": \"Detector-SN1931BD\"\n" +
                 "}");
 
 

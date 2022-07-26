@@ -1,7 +1,9 @@
 package com.philips.hc.iap.svc.digitaltwin.service;
 
+import com.philips.hc.iap.svc.digitaltwin.model.DTwinBattery;
 import com.philips.hc.iap.svc.digitaltwin.model.DTwinDetector;
 import com.philips.hc.iap.svc.digitaltwin.model.DTwinDetectorCalibration;
+import com.philips.hc.iap.svc.digitaltwin.model.DtwinDetectorWIFI;
 import com.philips.hc.iap.svc.digitaltwin.utilities.DTwinConstant;
 import org.json.JSONObject;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -38,6 +40,16 @@ public class EventParser {
             DTwinDetectorCalibration dTwinDetectorCalibration = new DTwinDetectorCalibration();
             dTwinDetectorCalibration = json2Java(newJS.toString(), DTwinDetectorCalibration.class);
             dTwinService.saveDTwinDetectorCalibration(dTwinDetectorCalibration);
+            break;
+          case DTwinConstant.DXR_INSTANCE_DETECTOR_WIFI:
+            DtwinDetectorWIFI dtwinDetectorWIFI = new DtwinDetectorWIFI();
+            dtwinDetectorWIFI = json2Java(newJS.toString(), DtwinDetectorWIFI.class);
+            dTwinService.saveDtwinDetectorWIFI(dtwinDetectorWIFI);
+            break;
+          case DTwinConstant.DXR_INSTANCE_BATTERY:
+            DTwinBattery dTwinBattery = new DTwinBattery();
+            dTwinBattery = json2Java(newJS.toString(), DTwinBattery.class);
+            dTwinService.saveDTwinBattery(dTwinBattery);
             break;
 
           default:

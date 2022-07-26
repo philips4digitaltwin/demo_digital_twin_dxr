@@ -12,7 +12,7 @@ public class DTwinConstant {
 
     public static final String DXR_INSTANCE_DETECTOR_CALIBRATION= "Calibration";
 
-    public static final String DXR_INSTANCE_DETECTOR_WIFI ="WIFI";
+    public static final String DXR_INSTANCE_DETECTOR_WIFI ="Wifi";
 
     public static final String DXR_INSTANCE_BATTERY ="Battery";
 

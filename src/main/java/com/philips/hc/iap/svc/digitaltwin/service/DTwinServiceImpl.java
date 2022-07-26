@@ -53,8 +53,8 @@ public class DTwinServiceImpl implements DTwinService{
 
     @Override
     public DtwinDetectorWIFI saveDtwinDetectorWIFI(DtwinDetectorWIFI dtwinDetectorWIFI) {
-        DTwin twin = dTwinRepository.getDTwinByInstanceType(DTwinConstant.DXR_INSTANCE_DETECTOR_WIFI);
-        dtwinDetectorWIFI.setdTwin(twin);
+      //  DTwin twin = dTwinRepository.getDTwinByInstanceType(DTwinConstant.DXR_INSTANCE_DETECTOR);
+   //     dtwinDetectorWIFI.setdTwin(twin);
         dtwinDetectorWIFIRepository.save(dtwinDetectorWIFI);
         return dtwinDetectorWIFI;
     }

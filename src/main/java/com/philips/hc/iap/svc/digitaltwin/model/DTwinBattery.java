@@ -20,14 +20,15 @@ public class DTwinBattery {
     @Column(name="remaininglifetime")
     private Timestamp remainingLifetime;
     @Column(name="remaininglifetimedays")
-    private int remainingLifetimeDays;
+    private String remainingLifetimeDays;
     @Column(name="ischargingcyclesexceeded")
-    private boolean isChargingCyclesExceeded;
+    private String isChargingCyclesExceeded;
     @Column(name="numberofchargingcycles")
-    private int numberOfChargingCycles;
+    private String numberOfChargingCycles;
 
+    private Timestamp eventDateTime;
 
-    public DTwinBattery(int dTwinInstanceBatteryID, String dtwin_instance_id, DTwin dTwin, String batterySerialNumber, Timestamp remainingLifetime, int remainingLifetimeDays, boolean isChargingCyclesExceeded, int numberOfChargingCycles) {
+    public DTwinBattery(int dTwinInstanceBatteryID, String dtwin_instance_id, DTwin dTwin, String batterySerialNumber, Timestamp remainingLifetime, String remainingLifetimeDays, String isChargingCyclesExceeded, String numberOfChargingCycles, Timestamp eventDateTime) {
         this.dTwinInstanceBatteryID = dTwinInstanceBatteryID;
         this.dtwin_instance_id = dtwin_instance_id;
         this.dTwin = dTwin;
@@ -36,6 +37,11 @@ public class DTwinBattery {
         this.remainingLifetimeDays = remainingLifetimeDays;
         this.isChargingCyclesExceeded = isChargingCyclesExceeded;
         this.numberOfChargingCycles = numberOfChargingCycles;
+        this.eventDateTime = eventDateTime;
+    }
+
+    public DTwinBattery() {
+
     }
 
 
@@ -80,27 +86,35 @@ public class DTwinBattery {
         this.remainingLifetime = remainingLifetime;
     }
 
-    public int getRemainingLifetimeDays() {
+    public String getRemainingLifetimeDays() {
         return remainingLifetimeDays;
     }
 
-    public void setRemainingLifetimeDays(int remainingLifetimeDays) {
+    public void setRemainingLifetimeDays(String remainingLifetimeDays) {
         this.remainingLifetimeDays = remainingLifetimeDays;
     }
 
-    public boolean isChargingCyclesExceeded() {
+    public String isChargingCyclesExceeded() {
         return isChargingCyclesExceeded;
     }
 
-    public void setChargingCyclesExceeded(boolean chargingCyclesExceeded) {
+    public void setChargingCyclesExceeded(String chargingCyclesExceeded) {
         isChargingCyclesExceeded = chargingCyclesExceeded;
     }
 
-    public int getNumberOfChargingCycles() {
+    public String getNumberOfChargingCycles() {
         return numberOfChargingCycles;
     }
 
-    public void setNumberOfChargingCycles(int numberOfChargingCycles) {
+    public void setNumberOfChargingCycles(String numberOfChargingCycles) {
         this.numberOfChargingCycles = numberOfChargingCycles;
+    }
+
+    public Timestamp getEventDateTime() {
+        return eventDateTime;
+    }
+
+    public void setEventDateTime(Timestamp eventDateTime) {
+        this.eventDateTime = eventDateTime;
     }
 }
